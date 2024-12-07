@@ -5,31 +5,26 @@ import PreJunior from './pages/PreJunior'
 import Junior from './pages/Junior'
 import JuniorPlus from './pages/JuniorPlus'
 
+
 export const PATH = {
     PRE_JUNIOR: '/pre-junior',
     JUNIOR: '/junior',
     JUNIOR_PLUS: '/junior-plus',
-}
+};
 
 function Pages() {
     return (
-        <div>
-            {/*Routes выбирает первый подходящий роут*/}
-            <Routes>
-                {/*роутинг будут писать студенты*/}
-                {/*в начале мы попадаем на страницу '/' и переходим сразу на страницу /pre-junior*/}
-                {/*<Route  path={'...'} element={<Navigate to={...} />}*/}
-
-                {/*роуты для /pre-junior, /junior, /junior-plus*/}
-                {/*<Route path={...} element={<PreJunior />}*/}
-                {/*<Route ...*/}
-                {/*<Route ...*/}
-
-                {/*роут для несуществующей страницы должен отрисовать <Error404 />*/}
-                {/*<Route ...*/}
-            </Routes>
-        </div>
-    )
+        <Routes>
+            {/* Перенаправление с '/' на '/pre-junior' */}
+            <Route path="/" element={<Navigate to={PATH.PRE_JUNIOR} />} />
+            <Route path={PATH.PRE_JUNIOR} element={<PreJunior />} />
+            <Route path={PATH.JUNIOR} element={<Junior />} />
+            <Route path={PATH.JUNIOR_PLUS} element={<JuniorPlus />} />
+            {/* Обработка неизвестных путей */}
+            <Route path="*" element={<Error404 />} />
+        </Routes>
+    );
 }
 
-export default Pages
+export default Pages;
+

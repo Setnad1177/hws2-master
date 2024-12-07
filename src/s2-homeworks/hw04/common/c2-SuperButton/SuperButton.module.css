@@ -1,36 +1,66 @@
+/* Общий стиль кнопки */
 .button {
+    padding: 10px 20px; /* Внутренние отступы */
+    border: none; /* Без рамки */
+    border-radius: 4px; /* Сглаженные углы */
+    font-size: 16px; /* Размер шрифта */
+    cursor: pointer; /* Указатель при наведении */
+    transition: background-color 0.3s, transform 0.2s; /* Плавные изменения */
 }
 
+/* Заблокированная кнопка */
 .disabled {
+    background-color: lightgray; /* Серый фон */
+    color: darkgray; /* Темно-серый текст */
+    cursor: not-allowed; /* Отключенный курсор */
 }
 
+/* Кнопка secondary */
 .secondary {
-}
-
-.default {
-}
-
-.red {
-}
-
-.default:hover {
-}
-
-.red:hover {
+    background-color: gray; /* Серый фон */
+    color: white; /* Белый текст */
 }
 
 .secondary:hover {
-}
-
-
-.default:active {
+    background-color: darkgray; /* Темнее при наведении */
 }
 
 .secondary:active {
+    transform: scale(0.95); /* Небольшое сжатие при клике */
+}
+
+/* Кнопка red */
+.red {
+    background-color: red; /* Красный фон */
+    color: white; /* Белый текст */
+}
+
+.red:hover {
+    background-color: darkred; /* Темно-красный при наведении */
 }
 
 .red:active {
+    transform: scale(0.95); /* Небольшое сжатие при клике */
 }
 
+/* Кнопка по умолчанию */
+.default {
+    background-color: blue; /* Синий фон */
+    color: white; /* Белый текст */
+}
+
+.default:hover {
+    background-color: darkblue; /* Темно-синий при наведении */
+}
+
+.default:active {
+    transform: scale(0.95); /* Небольшое сжатие при клике */
+}
+
+/* Стиль для кнопок, которые заблокированы */
 .button:disabled {
+    background-color: lightgray; /* Фон заблокированной кнопки */
+    color: darkgray; /* Текст заблокированной кнопки */
+    cursor: not-allowed; /* Запретный курсор */
+    pointer-events: none; /* Полное отключение кликов */
 }

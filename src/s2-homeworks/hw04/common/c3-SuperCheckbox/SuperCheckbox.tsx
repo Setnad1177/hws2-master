@@ -34,6 +34,12 @@ const SuperCheckbox: React.FC<SuperCheckboxPropsType> = (
         // ЕСЛИ(onChange ВООБЩЕ СУЩЕСТВУЕТ){
         //    ПЕРЕДАТЬ ЕМУ ИВЕНТ
         //}
+        if (onChangeChecked) {
+            onChangeChecked(e.currentTarget.checked)
+        }
+        if (onChange) {
+            onChange(e);
+        }
     }
 
     const finalInputClassName = s.checkbox
