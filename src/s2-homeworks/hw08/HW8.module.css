@@ -1,23 +1,49 @@
 .item {
+    border-bottom: 1px solid #ccc;
 }
 
 .item:last-of-type {
+    border-bottom: none;
 }
 
 .users {
-}
-
-.buttonsContainer {
-}
-
-.container {
+    width: 100%;
+    border-collapse: collapse;
 }
 
 .thead {
+    background-color: #f0f0f0;
+    font-weight: bold;
 }
 
-.nameCol {
+.nameCol, .ageCol {
+    padding: 10px;
+    text-align: left;
 }
 
-.ageCol {
+.buttonsContainer {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.activeButton {
+    background-color: blue;
+    color: white;
+    border: 1px solid #00aaff;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.buttonsContainer button {
+    margin-right: 10px;
+    padding: 10px 20px;
+    border: 1px solid #00aaff;
+    background-color: white;
+    color: #00aaff;
+    cursor: pointer;
+}
+
+.buttonsContainer button:hover {
+    background-color: #e0f7ff;
 }

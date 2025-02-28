@@ -8,7 +8,7 @@ import User from './User'
 /*
 * 1 - дописать типы и логику (сортировка по имени, фильтрация по совершеннолетию) homeWorkReducer, проверить тестом
 * 2 - дописать компоненту User
-* 3 - сделать стили в соответствии с дизайном
+
 * */
 
 export type UserType = {
@@ -62,21 +62,21 @@ const HW8 = () => {
                         <SuperButton
                             id={'hw8-button-up'}
                             onClick={sortUp}
-                            xType={currentSort === 'up' ? '' : 'secondary'}
+                            xType={currentSort === 'up' ? 'activeButton' : 'secondary'}
                         >
                             Sort up
                         </SuperButton>
                         <SuperButton
                             id={'hw8-button-down'}
                             onClick={sortDown}
-                            xType={currentSort === 'down' ? '' : 'secondary'}
+                            xType={currentSort === 'down' ? 'activeButton' : 'secondary'}
                         >
                             Sort down
                         </SuperButton>
                         <SuperButton
                             id={'hw8-button-18'}
                             onClick={check18}
-                            xType={currentSort === '18' ? '' : 'secondary'}
+                            xType={currentSort === '18' ? 'activeButton' : 'secondary'}
                         >
                             Check 18+
                         </SuperButton>
