@@ -1,3 +1,13 @@
 .loader {
-    /*свг и/или анимация*/
+    border: 8px solid #f3f3f3; /* Цвет фона круга */
+    border-top: 8px solid #3498db; /* Цвет анимации */
+    border-radius: 50%; /* Делаем круг */
+    width: 50px; /* Размер круга */
+    height: 50px; /* Размер круга */
+    animation: spin 1.5s linear infinite; /* Анимация вращения */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
 }

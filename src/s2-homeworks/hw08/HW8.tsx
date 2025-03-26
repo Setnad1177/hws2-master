@@ -15,6 +15,12 @@ export type UserType = {
     _id: number
     name: string
     age: number
+
+
+
+
+
+
 }
 
 const initialPeople: UserType[] = [
